@@ -67,9 +67,9 @@ int retirar(Fila *f){
 }
 
 int main() {
-  int opcao;
+  int opcao, opRetirar;
   //lista de leitores
-  int leitores[3] = [-1, -1, -1];
+  int leitores[3] = {-1, -1, -1};
   int escritor = -1;
   Fila processos;
   int tempo = 0;
@@ -147,7 +147,6 @@ int main() {
       exibir(&processos);
       if(escritor == -1){
         escritor = retirar(&processos);
-        tempo = 5;
         // Se não existe Processo em escrita
         // e não existe processo na fila de escrita, então pode-se ler
         if(escritor == -1){
@@ -165,11 +164,12 @@ int main() {
       }
       else{
         printf("Processo %d em escrita\n", escritor);
-        printf("Sem leitura\n");
-        if(tempo <=0){
+        printf("Deseja retirar o processo da escrita?\n1-Sim\n2-Nao\n");
+        scanf("%d", &opRetirar);
+        if(opRetirar == 1){
           escritor = -1;
         }
-        tempo--;
+
       }
   }
 
