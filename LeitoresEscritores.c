@@ -68,6 +68,7 @@ int retirar(Fila *f){
 
 int main() {
   int opcao;
+  int leitores[3] = [-1, -1, -1];
   int escritor = -1;
   Fila processos;
   int tempo = 0;
@@ -77,7 +78,7 @@ int main() {
 
   while( 1 ){
 
-		printf("\n1 - Solicitacao de escrita do processo 1\n2 - Solicitacao de escrita do processo 2\n3 - Solicitacao de escrita do processo 3\n4 - Passar turno\n0 - Sair\n\nOpcao? ");
+		printf("\n1 - Solicitacao de escrita do processo 1\n2 - Solicitacao de escrita do processo 2\n3 - Solicitacao de escrita do processo 3\n4 - Passar turno\n 5 - Solicitacao de leitura do processo 1 \n6 - Solicitacao de leitura do processo 2 \n7 - Solicitacao de leitura do processo 3\n8 - Remover da leitura o processo 1 \n9 - Remover da leitura o processo 2 \n10 - Remover da leitura o processo 3\n0 - Sair\n\nOpcao? ");
 		scanf("%d", &opcao);
 
 		switch(opcao){
@@ -115,6 +116,30 @@ int main() {
         printf("Passagem de turno...\n");
 				break;
 
+      case 5:
+        leitores[1] = 1;
+        break;
+
+      case 6:
+          leitores[2] = 2;
+          break;
+
+      case 7:
+          leitores[3] = 3;
+          break;
+
+      case 8:
+          leitores[1] = -1;
+          break;
+
+      case 9:
+          leitores[2] = -1;
+          break;
+
+      case 10:
+          leitores[3] = -1;
+          break;
+
 			default:
 				printf("\nOpcao Invalida\n\n");
       }
@@ -122,6 +147,14 @@ int main() {
       if(escritor == -1){
         escritor = retirar(&processos);
         tempo = 5;
+        if(escritor == -1){
+          printf("Permitida a leitura. Processos lendo:\n");
+          for (int i = 0; i < 3; i++) {
+            if (leitores[i] != -1){
+              printf("Processo %d\n", leitores[i]);
+            }
+          }
+        }
         printf("Sem processos em escrita\n");
       }
       else{
