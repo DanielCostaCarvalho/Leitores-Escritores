@@ -79,7 +79,7 @@ int main() {
 
   while( 1 ){
 
-		printf("\n1 - Solicitacao de escrita do processo 1\n2 - Solicitacao de escrita do processo 2\n3 - Solicitacao de escrita do processo 3\n4 - Passar turno\n 5 - Solicitacao de leitura do processo 1 \n6 - Solicitacao de leitura do processo 2 \n7 - Solicitacao de leitura do processo 3\n8 - Remover da leitura o processo 1 \n9 - Remover da leitura o processo 2 \n10 - Remover da leitura o processo 3\n0 - Sair\n\nOpcao? ");
+		printf("\n1 - Solicitacao de escrita do processo 1\n2 - Solicitacao de escrita do processo 2\n3 - Solicitacao de escrita do processo 3\n4 - Passar turno\n5 - Solicitacao de leitura do processo 1 \n6 - Solicitacao de leitura do processo 2 \n7 - Solicitacao de leitura do processo 3\n8 - Remover da leitura o processo 1 \n9 - Remover da leitura o processo 2 \n10 - Remover da leitura o processo 3\n0 - Sair\n\nOpcao? ");
 		scanf("%d", &opcao);
 
 		switch(opcao){
