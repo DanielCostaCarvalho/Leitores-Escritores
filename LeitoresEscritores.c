@@ -118,27 +118,27 @@ int main() {
 				break;
 
       case 5:
-        leitores[1] = 1;
+        leitores[0] = 1;
         break;
 
       case 6:
-          leitores[2] = 2;
+          leitores[1] = 2;
           break;
 
       case 7:
-          leitores[3] = 3;
+          leitores[2] = 3;
           break;
 
       case 8:
-          leitores[1] = -1;
+          leitores[0] = -1;
           break;
 
       case 9:
-          leitores[2] = -1;
+          leitores[1] = -1;
           break;
 
       case 10:
-          leitores[3] = -1;
+          leitores[2] = -1;
           break;
 
 			default:
